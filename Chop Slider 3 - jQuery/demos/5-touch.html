@@ -1,0 +1,221 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Chop Slider 3</title>
+<link rel="stylesheet" href="cs3/idangerous.chopslider-3.4.css">
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="cs3/idangerous.chopslider-3.4.min.js"></script>
+<script>
+$(document).ready(function() {
+	
+	
+	var cs3 = $('.cs3-slide-s').cs3({
+		pagination : {
+			container : '.cs3-slide-s .cs3-pagination',
+			hideOnStart : true	
+		},
+		navigation : {
+			next : '.cs3-slide-s .cs3-slide-next',
+			prev : '.cs3-slide-s .cs3-slide-prev'	,
+			hideOnStart : true
+		},
+		touch : {
+			enabled : true,
+			effect : 'slide-s'	
+		}
+	});
+	
+	$('.cs3-slide-m').cs3({
+		pagination : {
+			container : '.cs3-slide-m .cs3-pagination',
+			hideOnStart : true	
+		},
+		navigation : {
+			next : '.cs3-slide-m .cs3-slide-next',
+			prev : '.cs3-slide-m .cs3-slide-prev'	,
+			hideOnStart : true
+		},
+		touch : {
+			enabled : true,
+			effect : 'slide-m'	
+		}
+	});
+	
+	$('.cs3-flip-s').cs3({
+		pagination : {
+			container : '.cs3-flip-s .cs3-pagination',
+			hideOnStart : true	
+		},
+		navigation : {
+			next : '.cs3-flip-s .cs3-slide-next',
+			prev : '.cs3-flip-s .cs3-slide-prev'	,
+			hideOnStart : true
+		},
+		touch : {
+			enabled : true,
+			effect : 'flip-s'	
+		}
+	});
+	
+	$('.cs3-flip-m').cs3({
+		pagination : {
+			container : '.cs3-flip-m .cs3-pagination',
+			hideOnStart : true	
+		},
+		navigation : {
+			next : '.cs3-flip-m .cs3-slide-next',
+			prev : '.cs3-flip-m .cs3-slide-prev'	,
+			hideOnStart : true
+		},
+		touch : {
+			enabled : true,
+			effect : 'flip-m'	
+		}
+	});
+	
+	$('.cs3-cube').cs3({
+		pagination : {
+			container : '.cs3-cube .cs3-pagination',
+			hideOnStart : true	
+		},
+		navigation : {
+			next : '.cs3-cube .cs3-slide-next',
+			prev : '.cs3-cube .cs3-slide-prev'	,
+			hideOnStart : true
+		},
+		touch : {
+			enabled : true,
+			effect : 'cube'	
+		}
+	});
+	
+	if (!cs3.support.touch) alert('Attention, your browser do not support touch!')
+	
+	
+});
+</script>
+<style>
+.cs3 {
+	width: 600px;
+	height: 300px;
+	margin:0 auto 60px;
+}
+.wrapper {
+	width:800px;
+	margin:0 auto;
+}
+h1 {
+	margin:50px 0 10px 0px;
+	text-align:center
+}
+body {
+	background:orange;
+}
+</style>
+</head>
+<body>
+<div class="wrapper">
+  
+  
+  
+  <h1>Chop Slider Touch "Single Slide" Effect</h1>
+  <div class="cs3-wrap cs3-skin-5">
+    <div class="cs3 cs3-slide-s">
+      <div class="cs3-slide"><img src="pics/a-1.jpg" width="600" height="300"></div>
+      <div class="cs3-slide"><img src="pics/a-2.jpg" width="600" height="300"></div>
+      <div class="cs3-slide"><img src="pics/e-3.jpg" width="600" height="300"></div>
+      <div class="cs3-slide"><img src="pics/e-4.jpg" width="600" height="300"></div>
+      <div class="cs3-skin-border-1"></div>
+      <div class="cs3-skin-border-2"></div>
+      <div class="cs3-shadow"><div class="cs3-shadow-left"><div class="cs3-shadow-right"><div class="cs3-shadow-mid"></div></div></div></div>
+      <div class="cs3-slide-prev"></div>
+      <div class="cs3-slide-next"></div>
+      <div class="cs3-pagination-wrap">
+        <div class="cs3-pagination"></div>
+      </div>
+    </div>
+  </div>
+  
+  <h1>Chop Slider Touch "Multi Slide" Effect</h1>
+  <div class="cs3-wrap cs3-skin-5">
+    <div class="cs3 cs3-slide-m">
+      <div class="cs3-slide"><img src="pics/a-1.jpg" width="600" height="300"></div>
+      <div class="cs3-slide"><img src="pics/a-2.jpg" width="600" height="300"></div>
+      <div class="cs3-slide"><img src="pics/e-3.jpg" width="600" height="300"></div>
+      <div class="cs3-slide"><img src="pics/e-4.jpg" width="600" height="300"></div>
+      <div class="cs3-skin-border-1"></div>
+      <div class="cs3-skin-border-2"></div>
+      <div class="cs3-shadow"><div class="cs3-shadow-left"><div class="cs3-shadow-right"><div class="cs3-shadow-mid"></div></div></div></div>
+      <div class="cs3-slide-prev"></div>
+      <div class="cs3-slide-next"></div>
+      <div class="cs3-pagination-wrap">
+        <div class="cs3-pagination"></div>
+      </div>
+    </div>
+  </div>
+  
+  <h1>Chop Slider Touch "Single Flip" Effect</h1>
+  <div class="cs3-wrap cs3-skin-5">
+    <div class="cs3 cs3-flip-s">
+      <div class="cs3-slide"><img src="pics/a-1.jpg" width="600" height="300"></div>
+      <div class="cs3-slide"><img src="pics/a-2.jpg" width="600" height="300"></div>
+      <div class="cs3-slide"><img src="pics/e-3.jpg" width="600" height="300"></div>
+      <div class="cs3-slide"><img src="pics/e-4.jpg" width="600" height="300"></div>
+      <div class="cs3-skin-border-1"></div>
+      <div class="cs3-skin-border-2"></div>
+      <div class="cs3-shadow"><div class="cs3-shadow-left"><div class="cs3-shadow-right"><div class="cs3-shadow-mid"></div></div></div></div>
+      <div class="cs3-slide-prev"></div>
+      <div class="cs3-slide-next"></div>
+      <div class="cs3-pagination-wrap">
+        <div class="cs3-pagination"></div>
+      </div>
+    </div>
+  </div>
+  
+  <h1>Chop Slider Touch "Multi Flip" Effect</h1>
+  <div class="cs3-wrap cs3-skin-5">
+    <div class="cs3 cs3-flip-m">
+      <div class="cs3-slide"><img src="pics/a-1.jpg" width="600" height="300"></div>
+      <div class="cs3-slide"><img src="pics/a-2.jpg" width="600" height="300"></div>
+      <div class="cs3-slide"><img src="pics/e-3.jpg" width="600" height="300"></div>
+      <div class="cs3-slide"><img src="pics/e-4.jpg" width="600" height="300"></div>
+      <div class="cs3-skin-border-1"></div>
+      <div class="cs3-skin-border-2"></div>
+      <div class="cs3-shadow"><div class="cs3-shadow-left"><div class="cs3-shadow-right"><div class="cs3-shadow-mid"></div></div></div></div>
+      <div class="cs3-slide-prev"></div>
+      <div class="cs3-slide-next"></div>
+      <div class="cs3-pagination-wrap">
+        <div class="cs3-pagination"></div>
+      </div>
+    </div>
+  </div>
+  
+  <h1>Chop Slider Touch "Cube" Effect</h1>
+  <div class="cs3-wrap cs3-skin-5">
+    <div class="cs3 cs3-cube">
+      <div class="cs3-slide"><img src="pics/a-1.jpg" width="600" height="300"></div>
+      <div class="cs3-slide"><img src="pics/a-2.jpg" width="600" height="300"></div>
+      <div class="cs3-slide"><img src="pics/e-3.jpg" width="600" height="300"></div>
+      <div class="cs3-slide"><img src="pics/e-4.jpg" width="600" height="300"></div>
+      <div class="cs3-skin-border-1"></div>
+      <div class="cs3-skin-border-2"></div>
+      <div class="cs3-shadow"><div class="cs3-shadow-left"><div class="cs3-shadow-right"><div class="cs3-shadow-mid"></div></div></div></div>
+      <div class="cs3-slide-prev"></div>
+      <div class="cs3-slide-next"></div>
+      <div class="cs3-pagination-wrap">
+        <div class="cs3-pagination"></div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+</div>
+</body>
+</html>

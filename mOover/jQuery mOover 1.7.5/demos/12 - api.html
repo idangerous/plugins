@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>mOover Demo</title>
+<link rel="stylesheet" href="moover/jquery.id.moover-1.5.css" type="text/css" >
+<script src="assets/jquery-1.7.1.min.js"></script>
+<script src="moover/jquery.id.moover-1.5.min.js"></script>
+<script>
+$(function(){
+	var myMoover = $(".moover").moover({
+		effects : {
+			'2':{effect:'typewriter'},
+			'3':{effect:'pusher'}
+		},
+		afterSlideSwitch: function(){
+			$('.active-slide').html( $('.moover-active-slide').index() )
+			$('.effect').html( myMoover.parameters.effect )
+		}	
+	})
+	
+	$('a.play').click(function(e) {
+        e.preventDefault()
+		myMoover.play()
+		updateAutoPlayStatus()
+    });
+	$('a.stop').click(function(e) {
+        e.preventDefault()
+		myMoover.stop()
+		updateAutoPlayStatus()
+    });
+	$('a.next').click(function(e) {
+        e.preventDefault()
+		myMoover.next()
+		updateAutoPlayStatus()
+    });
+	$('a.prev').click(function(e) {
+        e.preventDefault()
+		myMoover.prev()
+		updateAutoPlayStatus()
+    });
+	
+	if (myMoover.hasCSS3()) {
+		$('.css3').html('support')	
+	}
+	else {
+		$('.css3').html('do not support')	
+	}
+	
+	function updateAutoPlayStatus() {
+		if (myMoover.isStopped)
+			$('.autoplay-status').html('disabled')	
+		else
+			$('.autoplay-status').html('enabled')
+	}
+	updateAutoPlayStatus()
+	
+})
+</script>
+<style type="text/css">
+.wrapper {
+	margin:0 auto;
+	width:820px;
+}
+.moover p {
+	font-size:32px;
+	font-weight:bold;
+	line-height:40px;
+}
+.moover-switch {
+	float:left;
+	margin-right:5px;
+	width:10px;
+	height:10px;
+	border:1px solid #333;
+}
+.moover-switch-active {
+	background:#333;
+}
+.moover-nav {
+	overflow:hidden;
+	margin:10px 0;
+}
+.controls {
+	text-align:center;
+}
+.controls a {
+	color:#000;
+	display:inline-block;
+	margin:0px 5px;
+	border:1px solid #555;
+	border-radius:3px;
+	text-decoration:none;
+	text-align:center;
+	width:25px;
+	line-height:25px;
+	height:25px;
+	background:#ccc;
+}
+</style>
+</head>
+
+<body>
+<div class="wrapper">
+  <div class="header"><h2>Moover API Demo</h2></div>
+  <div class="moover">
+    <div class="moover-slide">
+      <div class="moover-text">
+        <p>This is a line 1</p>
+        <p>This is a line 2</p>
+        <p>This is a line 3</p>
+      </div>
+    </div>
+    <div class="moover-slide"> <img src="assets/slide1.jpg" width="900" />
+      <div class="moover-text">
+        <p>This is a line 1</p>
+        <p>This is a line 2</p>
+        <p>This is a line 3</p>
+      </div>
+    </div>
+    <div class="moover-slide"> <img src="assets/slide2.jpg" width="900" />
+      <div class="moover-text">
+        <p>This is a line 1</p>
+        <p>This is a line 2</p>
+        <p>This is a line 3</p>
+      </div>
+    </div>
+    
+  </div>
+  <!-- Nav Container -->
+    <p>Autoplay is <strong class="autoplay-status"></strong></p>
+    <p>Active slide's index number is <strong class="active-slide">0</strong>, and this slide uses the "<strong class="effect">slide</strong>" effect</p>
+    <p>This demo demonstrate external API functions to control mOover. So click this link to <a class="stop" href="#">stop</a> the mOover, try <a href="#" class="prev">this one</a> and next slide will be the previous slide. Use <a href="#" class="play">this link</a> to enable autoplay again.</p>
+    <p>You browser <strong class="css3"></strong> CSS3 transitions</p>
+    </div>
+</div>
+</body>
+</html>

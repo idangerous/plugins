@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>S6 Demo</title>
+
+<!-- Add S6's CSS styles -->
+<link rel="stylesheet" href="s6/idangerous.s6-1.3.css">
+<!-- Custom Styles -->
+<link rel="stylesheet" href="css/demo.css">
+<!-- Add jQuery or Zepto -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<!-- Add Swiper Fallback -->
+<script src="js/idangerous.swiper-1.1.min.js"></script>
+<!-- Main S6 Script -->
+<script src="s6/idangerous.s6-1.3.min.js"></script>
+<script>
+$(document).ready(function() {
+
+    var s6 = $('.s6-container').s6()
+	
+});
+</script>
+<style>
+.s6-container {
+	position:fixed;
+	width:100%;
+	height:100%;
+	margin:0;
+}
+.s6-slide {
+	width:100%;
+	height:100%;
+}
+</style>
+</head>
+<body>
+<div class="s6-container">
+  <div class="s6-wrapper">
+    <div class="s6-slide blue-slide">Slide 1</div>
+    <div class="s6-slide orange-slide">Slide 2</div>
+    <div class="s6-slide red-slide">Slide 3</div>
+    <div class="s6-slide green-slide">Slide 4</div>
+  </div>
+</div>
+</div>
+</body>
+</html>

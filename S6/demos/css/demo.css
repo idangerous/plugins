@@ -1,0 +1,87 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	background:#fff;
+	font-family:Arial, Helvetica, sans-serif;
+	margin:0;
+	font-size:13px;
+	color:#333;
+}
+h1 {
+	margin:20px 0 0;
+	font-size:18px;
+	text-align:center
+}
+.wrapper {
+	width:500px;
+	margin:0 auto;
+}
+p {
+	margin:10px 0;
+}
+/* Set Slider's size */
+.s6-container {
+	margin:20px 0 60px;
+}
+.s6-container, .s6-slide {
+	width:500px;
+	height:250px;
+}
+.s6-slide {
+	font-size:30px;
+	color:#fff;
+	line-height:250px;
+	text-align:center
+}
+/* Custom Slides */
+.red-slide {
+	background: #ca4040 !important;
+}
+.blue-slide {
+	background: #4390ee !important;
+}
+.orange-slide {
+	background: #ff8604 !important;
+}
+.green-slide {
+	background: #49a430 !important;
+}
+/* Custom Pagination Style */
+.nav {
+	text-align:center;
+	margin-bottom:60px;
+}
+.pagination {
+	text-align:center;
+	display:inline-block;
+}
+.s6-pagination-switch {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	background: #fff;
+	margin: 0 5px;
+	border-radius: 10px;
+	box-shadow: 0px 1px 2px #000 inset;
+	
+}
+.s6-active-switch {
+	background: #333;
+	
+}
+.button {
+	display:inline-block;
+	padding:3px 5px;
+	border:1px solid #ccc;
+	background:#eee;
+	border-radius:3px;
+	cursor:pointer;
+}
+.callbacks {
+	overflow:auto;
+	height:300px;
+	padding:20px;
+	border:1px solid #ccc;
+	width:210px;
+}

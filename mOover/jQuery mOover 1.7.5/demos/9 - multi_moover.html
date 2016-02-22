@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>mOover Demo</title>
+<link rel="stylesheet" href="moover/jquery.id.moover-1.5.css" type="text/css" >
+<script src="assets/jquery-1.7.1.min.js"></script>
+<script src="moover/jquery.id.moover-1.5.min.js"></script>
+<script>
+$(function(){
+	$(".moover1").moover()
+	$(".moover2").moover({effect:"pusher"})
+	$(".moover3").moover({effect:"typewriter"})
+	
+})
+</script>
+<style type="text/css">
+.wrapper {
+	margin:0 auto;
+	width:820px;
+}
+.moover p {
+	font-size:28px;
+	font-weight:bold;
+	line-height:50px;
+	color:#fff;
+	font-family:Arial, Helvetica, sans-serif;
+}
+.moover, .moover .moover-slide {
+	width:820px;
+	height:200px;	
+}
+</style>
+</head>
+
+<body>
+<div class="wrapper">
+  <div class="header"><h2>Multi mOover</h2></div>
+  <!-- First Moover -->
+  <div class="moover moover1">
+    <div class="moover-slide"> <img src="assets/slide1.jpg" width="900" />
+      <div class="moover-text">
+        <p>This is a line 1</p>
+        <p>This is a line 2</p>
+        <p>This is a line 3</p>
+      </div>
+    </div>
+    <div class="moover-slide"> <img src="assets/slide2.jpg" width="900" />
+      <div class="moover-text">
+        <p>This is a line 1</p>
+        <p>This is a line 2</p>
+        <p>This is a line 3</p>
+      </div>
+    </div>
+  </div>
+  <!-- Second Moover -->
+  <div class="moover moover2">
+    <div class="moover-slide"> <img src="assets/slide3.jpg" width="900" />
+      <div class="moover-text">
+        <p>This is a line 1</p>
+        <p>This is a line 2</p>
+        <p>This is a line 3</p>
+      </div>
+    </div>
+    <div class="moover-slide"> <img src="assets/slide4.jpg" width="1010" />
+      <div class="moover-text">
+        <p>This is a line 1</p>
+        <p>This is a line 2</p>
+        <p>This is a line 3</p>
+      </div>
+    </div>
+  </div>
+  <!-- Third Moover -->
+  <div class="moover moover3">
+    <div class="moover-slide"> <img src="assets/slide5.jpg" width="1010" />
+      <div class="moover-text">
+        <p>This is a line 1</p>
+        <p>This is a line 2</p>
+        <p>This is a line 3</p>
+      </div>
+    </div>
+    <div class="moover-slide"> <img src="assets/slide6.jpg" width="1010" />
+      <div class="moover-text">
+        <p>This is a line 1</p>
+        <p>This is a line 2</p>
+        <p>This is a line 3</p>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</body>
+</html>

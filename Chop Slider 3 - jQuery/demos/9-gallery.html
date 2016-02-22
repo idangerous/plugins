@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Chop Slider 3</title>
+<link rel="stylesheet" href="cs3/idangerous.chopslider-3.4.css">
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="cs3/idangerous.chopslider-3.4.min.js"></script>
+<script>
+$(document).ready(function() {	
+	var cs3 = $('.cs3').cs3({
+		pagination : {
+			container : '.cs3 .cs3-pagination'	
+		},
+		navigation : {
+			next : '.cs3 .cs3-slide-next',
+			prev : '.cs3 .cs3-slide-prev'	
+		},
+		effects : 'bricks',
+		autoplay : {
+			enabled : true,
+			delay : 5000,
+			disableOnInteraction : true	
+		},
+		gallery : {
+			enabled : true,
+			trigger : '.cs3-fs-trigger',
+			hideOnStart : true,
+			showCaptions : true	
+		}
+		
+	});
+});
+</script>
+<style>
+.cs3 {
+	width: 600px;
+	height: 300px;
+	margin:0 auto;
+}
+.wrapper {
+	width: 800px;
+	margin: 0 auto;
+}
+h1 {
+	margin: 50px 0 10px 0px;
+	text-align: center
+}
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <h1>Slider With Fullscreen Gallery</h1>
+  <div class="cs3-wrap cs3-skin-no">
+    <div class="cs3">
+      <div class="cs3-slide"><img src="pics/a-1.jpg" width="600" height="300"></div>
+      <div class="cs3-slide"><img src="pics/a-2.jpg" width="600" height="300"></div>
+      <div class="cs3-slide"><img src="pics/e-3.jpg" width="600" height="300"></div>
+      <div class="cs3-slide"><img src="pics/e-4.jpg" width="600" height="300"></div>
+      <div class="cs3-slide-prev"></div>
+      <div class="cs3-slide-next"></div>
+      <div class="cs3-pagination-wrap">
+        <div class="cs3-pagination"></div>
+      </div>
+      <!-- Gallery trigger button:-->
+      <div class="cs3-fs-trigger cs3-fs-trigger-right cs3-fs-trigger-black "></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

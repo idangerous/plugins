@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Chop Slider 3</title>
+<link rel="stylesheet" href="cs3/idangerous.chopslider-3.4.css">
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="cs3/idangerous.chopslider-3.4.min.js"></script>
+<script>
+$(document).ready(function() {	
+	var cs3 = $('.cs3').cs3({
+		pagination : {
+			showOnlyOnHover: true,
+			container : '.cs3 .cs3-pagination'	
+		},
+		responsive: true,
+		navigation : {
+			showOnlyOnHover: true,
+			next : '.cs3 .cs3-slide-next',
+			prev : '.cs3 .cs3-slide-prev'	
+		},
+		effects : 'random-3d'
+	});
+});
+</script>
+<style>
+.cs3 {
+	width: 600px;
+	height: 300px;
+	margin:0 auto;
+}
+.wrapper {
+	width: 800px;
+	margin: 0 auto;
+}
+h1 {
+	margin: 50px 0 10px 0px;
+	text-align: center
+}
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <h1>Slider With Fullscreen Gallery</h1>
+  <div class="cs3-wrap cs3-skin-no">
+    <div class="cs3">
+      <div class="cs3-slide"><img src="pics/a-1.jpg" width="600" height="300"></div>
+      <!-- Additional cs3-video-slide is required for video slide-->
+      <div class="cs3-slide cs3-video-slide">
+    	<!-- container with video iframe -->
+      	<div class="cs3-video">
+      		<!-- Vimeo frame MUST have "api=1" param in the url !!! -->
+    		<iframe src="http://player.vimeo.com/video/52861634?api=1" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+    	</div>
+      </div>
+      <div class="cs3-slide"><img src="pics/a-2.jpg" width="600" height="300"></div>
+      <div class="cs3-slide cs3-video-slide">
+      	<div class="cs3-video">
+    		<iframe width="560" height="315" src="http://www.youtube.com/embed/JRfuAukYTKg" frameborder="0" allowfullscreen></iframe>
+    	</div>
+      </div>
+      <div class="cs3-slide"><img src="pics/e-3.jpg" width="600" height="300"></div>
+      <div class="cs3-slide"><img src="pics/e-4.jpg" width="600" height="300"></div>
+      <div class="cs3-slide-prev"></div>
+      <div class="cs3-slide-next"></div>
+      <div class="cs3-pagination-wrap">
+        <div class="cs3-pagination"></div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

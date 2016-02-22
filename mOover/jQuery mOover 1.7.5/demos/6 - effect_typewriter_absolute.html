@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>mOover Demo</title>
+<link rel="stylesheet" href="moover/jquery.id.moover-1.5.css" type="text/css" >
+<script src="assets/jquery-1.7.1.min.js"></script>
+<script src="moover/jquery.id.moover-1.5.min.js"></script>
+<script>
+$(function(){
+	$(".moover").moover({
+		
+		/* Effect */
+		effect : "typewriter",
+		
+		/* Image Effects */
+		moveImage : true,
+		moveWidth : 100,
+		moveOutImage : true,
+		
+		/* Image Durations */
+		moveTime : 2000,
+		slideTime : 1000,
+		
+		/* TW settings */
+		
+		waitForImage : true,
+		charDelay : 40,
+		charTime:100,
+		textHoldTime:1000,
+		initCharTransform : "scale(0,0) rotate(0deg) translate(0px, 0px)",
+		middleCharTransform : "scale(0.8,-0.5) rotate(0deg) translate(0px, 0px)",
+		finalCharTransform : "scale(1,1) rotate(0deg) translate(0px, 0px)",
+		charOrigin : "center bottom",
+
+
+		/* Callbacks */
+		onStart : function() {
+			// Do something
+		},
+		onSlideSwitch : function() {
+			// Do something
+		}
+	})
+	
+})
+</script>
+<style type="text/css">
+.wrapper {
+	margin:0 auto;
+	width:820px;
+}
+.moover .moover-slide p {
+	font-size:32px;
+	font-weight:bold;
+	line-height:50px;
+	color:#fff;
+	font-family:Arial, Helvetica, sans-serif;
+	text-align:left
+}
+.moover-absolute p {
+	position:absolute;
+}
+.line1 {
+	left:30px;
+	top:30px;
+}
+.line2 {
+	left:300px;
+	top:150px;
+	width:300px;
+}
+.line3 {
+	bottom:40px;
+	left:100px;
+}
+.line4 {
+	right:20px;
+	bottom:20px;
+}
+.line5 {
+	left:400px;
+	top:10px;
+}
+</style>
+</head>
+
+<body>
+<div class="wrapper">
+  <div class="header"><h2>Moover Typewriter with absolute position</h2></div>
+  <div class="moover">
+    <div class="moover-slide moover-absolute"> <img src="assets/slide3.jpg" width="900" />
+      <div class="moover-text">
+        <p class="line1">This is a line 1</p>
+        <p class="line2">This is a line 2</p>
+        <p class="line3">This is a line 3</p>
+        <p class="line4">This is a line 4</p>
+        <p class="line5">This is a line 5</p>
+      </div>
+    </div>
+    <div class="moover-slide moover-absolute"> <img src="assets/slide1.jpg" width="900" />
+      <div class="moover-text">
+        <p class="line1">This is a line 1</p>
+        <p class="line2">This is a line 2</p>
+        <p class="line3">This is a line 3</p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

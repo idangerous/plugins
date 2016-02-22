@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Chop Slider 3</title>
+<link rel="stylesheet" href="cs3/idangerous.chopslider-3.4.css">
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="cs3/idangerous.chopslider-3.4.min.js"></script>
+<script>
+$(document).ready(function() {	
+	var cs3 = $('.cs3').cs3({
+		pagination : {
+			container : '.cs3 .cs3-pagination'	
+		},
+		navigation : {
+			next : '.cs3 .cs3-slide-next',
+			prev : '.cs3 .cs3-slide-prev'	
+		},
+		effects : 'random-flat, random-3d, random-2d, random-canvas',
+		responsive: true
+	});
+});
+</script>
+<style>
+.cs3 {
+	width: 900px;
+	height:450px;
+	margin:0 auto;
+}
+.wrapper {
+	width: 100%;
+	margin: 0 auto;
+}
+h1 {
+	margin: 50px 0 10px 0px;
+	text-align: center
+}
+@media screen and (max-width: 850px) {
+    .cs3 {
+		width:800px;
+		height:400px;
+	}
+}
+@media screen and (max-width: 750px) {
+    .cs3 {
+		width:700px;
+		height:350px;
+	}
+}
+
+@media screen and (max-width: 650px) {
+    .cs3 {
+		width:600px;
+		height:300px;
+	}
+}
+
+@media screen and (max-width: 550px) {
+    .cs3 {
+		width:500px;
+		height:250px;
+	}
+}
+@media screen and (max-width: 350px) {
+    .cs3 {
+		width:320px;
+		height:160px;
+	}
+}
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <h1>Responsive Slider. Resize browser</h1>
+  <div class="cs3-wrap cs3-skin-no">
+    <div class="cs3">
+      <div class="cs3-slide"><img src="pics/a-1.jpg" ></div>
+      <div class="cs3-slide"><img src="pics/a-2.jpg" ></div>
+      <div class="cs3-slide"><img src="pics/e-3.jpg" ></div>
+      <div class="cs3-slide"><img src="pics/e-4.jpg" ></div>
+      <div class="cs3-slide-prev"></div>
+      <div class="cs3-slide-next"></div>
+      <div class="cs3-pagination-wrap">
+        <div class="cs3-pagination"></div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Chop Slider 3</title>
+<link rel="stylesheet" href="cs3/idangerous.chopslider-3.4.css">
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="cs3/idangerous.chopslider-3.4.min.js"></script>
+<script>
+$(document).ready(function() {
+	
+	
+	$('.cs3-1').cs3({
+		pagination : {
+			container : '.cs3-1 .cs3-pagination'	
+		},
+		navigation : {
+			next : '.cs3-1 .cs3-slide-next',
+			prev : '.cs3-1 .cs3-slide-prev'	
+		},
+		ambilight: {
+			enabled : true,
+			size : 50	
+		}
+	});
+	
+	$('.cs3-2').cs3({
+		pagination : {
+			container : '.cs3-2 .cs3-pagination'	
+		},
+		navigation : {
+			next : '.cs3-2 .cs3-slide-next',
+			prev : '.cs3-2 .cs3-slide-prev'	
+		},
+		ambilight: {
+			enabled : true,
+			size : 100	
+		}
+	});
+	
+	$('.cs3-3').cs3({
+		pagination : {
+			container : '.cs3-3 .cs3-pagination'	
+		},
+		navigation : {
+			next : '.cs3-3 .cs3-slide-next',
+			prev : '.cs3-3 .cs3-slide-prev'	
+		},
+		ambilight: {
+			enabled : true,
+			size : 150,
+			colorIndex : 1.8,
+			fadeIndex : 1	
+		}
+	});
+	
+	
+});
+</script>
+<style>
+.cs3 {
+	width: 600px;
+	height: 300px;
+	margin-bottom:100px
+}
+.wrapper {
+	width:800px;
+	margin:0 auto;
+}
+h1 {
+	margin:50px 0 10px 0px;
+	color:#fff;
+}
+body {
+	background:#000;
+}
+</style>
+</head>
+<body>
+<div class="wrapper">
+  
+  
+  
+  <h1>Ambilight 50px</h1>
+  <div class="cs3-wrap cs3-skin-1">
+    <div class="cs3 cs3-1">
+      <div class="cs3-slide"><img src="pics/a-1.jpg" width="600" height="300"></div>
+      <div class="cs3-slide"><img src="pics/a-2.jpg" width="600" height="300"></div>
+      <div class="cs3-slide"><img src="pics/e-3.jpg" width="600" height="300"></div>
+      <div class="cs3-slide"><img src="pics/e-4.jpg" width="600" height="300"></div>
+      <div class="cs3-skin-border-1"></div>
+      <div class="cs3-skin-border-2"></div>
+      <div class="cs3-slide-prev"></div>
+      <div class="cs3-slide-next"></div>
+      <div class="cs3-pagination-wrap">
+        <div class="cs3-pagination"></div>
+      </div>
+    </div>
+  </div>
+  
+  <h1>Ambilight 100px</h1>
+  <div class="cs3-wrap cs3-skin-1">
+    <div class="cs3 cs3-2">
+      <div class="cs3-slide"><img src="pics/a-1.jpg" width="600" height="300"></div>
+      <div class="cs3-slide"><img src="pics/a-2.jpg" width="600" height="300"></div>
+      <div class="cs3-slide"><img src="pics/e-3.jpg" width="600" height="300"></div>
+      <div class="cs3-slide"><img src="pics/e-4.jpg" width="600" height="300"></div>
+      <div class="cs3-skin-border-1"></div>
+      <div class="cs3-skin-border-2"></div>
+      <div class="cs3-slide-prev"></div>
+      <div class="cs3-slide-next"></div>
+      <div class="cs3-pagination-wrap">
+        <div class="cs3-pagination"></div>
+      </div>
+    </div>
+  </div>
+  
+  <h1>Ambilight 150px</h1>
+  <div class="cs3-wrap cs3-skin-1">
+    <div class="cs3 cs3-3">
+      <div class="cs3-slide"><img src="pics/a-1.jpg" width="600" height="300"></div>
+      <div class="cs3-slide"><img src="pics/a-2.jpg" width="600" height="300"></div>
+      <div class="cs3-slide"><img src="pics/e-3.jpg" width="600" height="300"></div>
+      <div class="cs3-slide"><img src="pics/e-4.jpg" width="600" height="300"></div>
+      <div class="cs3-skin-border-1"></div>
+      <div class="cs3-skin-border-2"></div>
+      <div class="cs3-slide-prev"></div>
+      <div class="cs3-slide-next"></div>
+      <div class="cs3-pagination-wrap">
+        <div class="cs3-pagination"></div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+</div>
+</body>
+</html>

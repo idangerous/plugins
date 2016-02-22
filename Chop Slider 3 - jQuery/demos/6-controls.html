@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Chop Slider 3</title>
+<link rel="stylesheet" href="cs3/idangerous.chopslider-3.4.css">
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="cs3/idangerous.chopslider-3.4.min.js"></script>
+<script>
+$(document).ready(function() {
+	
+	
+	$('.cs3-1').cs3({
+		pagination : {
+			container : '.cs3-1 .cs3-pagination',
+			hideOnStart : false,
+			showOnlyOnHover : false	
+		},
+		navigation : {
+			next : '.cs3-1 .cs3-slide-next',
+			prev : '.cs3-1 .cs3-slide-prev'	,
+			hideOnStart : false,
+			showOnlyOnHover : false
+		}
+	});
+	$('.cs3-2').cs3({
+		pagination : {
+			container : '.cs3-2 .cs3-pagination',
+			hideOnStart : true,
+			showOnlyOnHover : false	
+		},
+		navigation : {
+			next : '.cs3-2 .cs3-slide-next',
+			prev : '.cs3-2 .cs3-slide-prev'	,
+			hideOnStart : true,
+			showOnlyOnHover : false
+		}
+	});
+	$('.cs3-3').cs3({
+		pagination : {
+			container : '.cs3-3 .cs3-pagination',
+			hideOnStart : true,
+			showOnlyOnHover : true	
+		},
+		navigation : {
+			next : '.cs3-3 .cs3-slide-next',
+			prev : '.cs3-3 .cs3-slide-prev'	,
+			hideOnStart : true,
+			showOnlyOnHover : true
+		}
+	});
+	
+});
+</script>
+<style>
+.cs3 {
+	width: 600px;
+	height: 300px;
+	margin:0 auto 60px;
+}
+.wrapper {
+	width:800px;
+	margin:0 auto;
+}
+h1 {
+	margin:50px 0 10px 0px;
+	text-align:center
+}
+</style>
+</head>
+<body>
+<div class="wrapper">
+  
+  
+  
+  <h1>Controls always visible</h1>
+  <div class="cs3-wrap cs3-skin-5">
+    <div class="cs3 cs3-1">
+      <div class="cs3-slide"><img src="pics/a-1.jpg" width="600" height="300"></div>
+      <div class="cs3-slide"><img src="pics/a-2.jpg" width="600" height="300"></div>
+      <div class="cs3-slide"><img src="pics/e-3.jpg" width="600" height="300"></div>
+      <div class="cs3-slide"><img src="pics/e-4.jpg" width="600" height="300"></div>
+      <div class="cs3-skin-border-1"></div>
+      <div class="cs3-skin-border-2"></div>
+      <div class="cs3-shadow"><div class="cs3-shadow-left"><div class="cs3-shadow-right"><div class="cs3-shadow-mid"></div></div></div></div>
+      <div class="cs3-slide-prev"></div>
+      <div class="cs3-slide-next"></div>
+      <div class="cs3-pagination-wrap">
+        <div class="cs3-pagination"></div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <h1>Controls will be hidden on transition start</h1>
+  <div class="cs3-wrap cs3-skin-5">
+    <div class="cs3 cs3-2">
+      <div class="cs3-slide"><img src="pics/e-1.jpg" width="600" height="300"></div>
+      <div class="cs3-slide"><img src="pics/e-2.jpg" width="600" height="300"></div>
+      <div class="cs3-slide"><img src="pics/e-3.jpg" width="600" height="300"></div>
+      <div class="cs3-slide"><img src="pics/e-4.jpg" width="600" height="300"></div>
+      <div class="cs3-skin-border-1"></div>
+      <div class="cs3-skin-border-2"></div>
+      <div class="cs3-shadow"><div class="cs3-shadow-left"><div class="cs3-shadow-right"><div class="cs3-shadow-mid"></div></div></div></div>
+      <div class="cs3-slide-prev"></div>
+      <div class="cs3-slide-next"></div>
+      <div class="cs3-pagination-wrap">
+        <div class="cs3-pagination"></div>
+      </div>
+    </div>
+  </div>
+  
+  <h1>Controls is hidden and will be visible on mouse hover</h1>
+  <div class="cs3-wrap cs3-skin-5">
+    <div class="cs3 cs3-3">
+      <div class="cs3-slide"><img src="pics/a-1.jpg" width="600" height="300"></div>
+      <div class="cs3-slide"><img src="pics/a-2.jpg" width="600" height="300"></div>
+      <div class="cs3-slide"><img src="pics/e-3.jpg" width="600" height="300"></div>
+      <div class="cs3-slide"><img src="pics/e-4.jpg" width="600" height="300"></div>
+      <div class="cs3-skin-border-1"></div>
+      <div class="cs3-skin-border-2"></div>
+      <div class="cs3-shadow"><div class="cs3-shadow-left"><div class="cs3-shadow-right"><div class="cs3-shadow-mid"></div></div></div></div>
+      <div class="cs3-slide-prev"></div>
+      <div class="cs3-slide-next"></div>
+      <div class="cs3-pagination-wrap">
+        <div class="cs3-pagination"></div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</div>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>S6 Demo</title>
+
+<!-- Add S6's CSS styles -->
+<link rel="stylesheet" href="s6/idangerous.s6-1.3.css">
+<!-- Custom Styles -->
+<link rel="stylesheet" href="css/demo.css">
+<!-- Add jQuery or Zepto -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<!-- Add Swiper Fallback -->
+<script src="js/idangerous.swiper-1.1.min.js"></script>
+<!-- Main S6 Script -->
+<script src="s6/idangerous.s6-1.3.min.js"></script>
+
+<script>
+$(document).ready(function() {
+
+    var s6 = $('.s61').s6({
+		//Specify Pagination's container
+		pagination : '.p1',
+		//Enable Dynamic Shadow
+		dynamicShadow : true,
+		
+		//Callbacks
+		onTouchStart : function() {
+			writeS61()
+			$(".callbacks").append('onTouchStart<br>')
+		},
+		onTouchMove : function() {
+			writeS61()
+			$(".callbacks").append('onTouchMove<br>')
+		},
+		onTouchEnd : function() {
+			writeS61()
+			$(".callbacks").append('onTouchEnd<br>')
+		},
+		onSlideChangeStart : function() {
+			writeS61()
+			$(".callbacks").append('onSlideChangeStart<br>')
+		},
+		onSlideChangeEnd : function() {
+			writeS61()
+			$(".callbacks").append('onSlideChangeEnd<br>')
+		},
+		onSlideReset : function() {
+			writeS61()
+			$(".callbacks").append('onSlideReset<br>')
+		},
+	})
+	$(".p1-next").click(function() {
+        s6.swipeNext()
+    });
+	$(".p1-prev").click(function() {
+        s6.swipePrev()
+    });
+	
+	function writeS61() {
+		$(".touchesStartX").html( s6.touches.startX )
+		$(".touchesStartY").html( s6.touches.startY )	
+		$(".touchesCurrentX").html( s6.touches.currentX )	
+		$(".touchesCurrentY").html( s6.touches.currentY )
+		
+		$(".rotatesStartX").html( s6.rotates.startX )
+		$(".rotatesStartY").html( s6.rotates.startY )	
+		$(".rotatesCurrentX").html( s6.rotates.currentX )	
+		$(".rotatesCurrentY").html( s6.rotates.currentY )
+		
+		$('.activeSlide').html( s6.activeSlide )
+	}
+	$('a.clear').click(function(e) {
+        e.preventDefault();
+		$('.callbacks').html('')
+    });
+	$(".support3D").html( s6.isSupport3D+'' )
+	$('.activeSlide').html( s6.activeSlide )
+	$(".supportTouch").html( s6.isSupportTouch()+'' )
+	
+});
+</script>
+</head>
+
+<body>
+<div class="wrapper">
+	<h1>API and Callbacks</h1>
+    <div class="s6-container s61">
+    	<div class="s6-wrapper">
+        	<div class="s6-slide blue-slide">Slide 1</div>
+            <div class="s6-slide orange-slide">Slide 2</div>
+            <div class="s6-slide red-slide">Slide 3</div>
+            <div class="s6-slide green-slide">Slide 4</div>
+    	</div>
+    </div>
+    <div class="nav" style="margin-bottom:20px">
+    	<div class="button p1-prev">Previous</div>
+        <div class="pagination p1"></div>
+        <div class="button p1-next">Next</div>
+    </div>
+    <div style="float:left; width:50%">
+        <p>
+            s6.touches.startX : <span class="touchesStartX"></span><br>
+            s6.touches.startY : <span class="touchesStartY"></span><br>
+            s6.touches.currentX : <span class="touchesCurrentX"></span><br>
+            s6.touches.currentX : <span class="touchesCurrentY"></span><br>
+        </p>
+        <p>
+            s6.rotates.startX : <span class="rotatesStartX"></span><br>
+            s6.rotates.startY : <span class="rotatesStartY"></span><br>
+            s6.rotates.currentX : <span class="rotatesCurrentX"></span><br>
+            s6.rotates.currentX : <span class="rotatesCurrentY"></span><br>
+        </p>
+        <p>s6.activeSlide : <span class="activeSlide"></span><br>
+           s6.isSupportTouch() : <span class="supportTouch"></span><br>
+           s6.isSupport3D : <span class="support3D"></span></p>
+    </div>
+    <div style="float:left; width:50%">
+    	<p style="text-align:right"><a href="#" class="clear">Clear</a></p>
+    	<div class="callbacks"></div>
+    </div>
+    <div style="clear:both"></div>
+</div>
+</body>
+</html>
